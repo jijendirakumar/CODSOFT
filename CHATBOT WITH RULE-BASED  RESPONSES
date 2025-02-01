@@ -1,0 +1,30 @@
+import webbrowser
+
+def chatbot():
+    print("Hello! I'm a simple chatbot. How can I assist you?")
+    while True:
+        user_input = input("You: ").lower()
+        if "bye" in user_input or "exit" in user_input:
+            print("Chatbot: Goodbye!")
+            break
+        elif "hello" in user_input or "hi" in user_input:
+            print("Chatbot: Hello! How can I assist you?")
+        elif "how are you" in user_input:
+            print("Chatbot: I'm just a bot, but I'm doing well. Thanks for asking!")
+        elif "your name" in user_input:
+            print("Chatbot: I'm a simple rule-based chatbot!")
+        elif "time and date" in user_input:
+            print("Chatbot: Sorry, I can't provide real-time and date updates.")
+        elif "help" in user_input:
+            print("Chatbot: I'm here to help! You can ask me questions like 'How are you?' or 'What is your name?'")
+        elif "basics of python programming" in user_input:
+            url="https://www.w3schools.com/python/python_intro.asp"
+            webbrowser.open(url)
+            print("Chatbot: Here's a link to learn Python basics: https://www.w3schools.com/python/python_intro.asp")
+        elif "geeksforgreeks login" in user_input or "gfg" in user_input:
+            url="https://www.geeksforgeeks.org/"
+            webbrowser.open(url)
+            print("chatbot: Here's a link to login geeksforgreeks: https://www.geeksforgeeks.org/")
+        else:
+            print("Chatbot: I'm sorry, I didn't understand that. Could you rephrase?")
+chatbot()
